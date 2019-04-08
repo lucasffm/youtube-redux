@@ -1,3 +1,3 @@
-const API_KEY = process.env.YT_API_KEY;
+const API_KEY = 'AIzaSyDmLuAUNoXz7yhHfoGeTkNTeVtknF4GWdA';
 
 export default API_KEY;
