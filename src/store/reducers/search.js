@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   error: false
 };
 
-export default function busca(state = INITIAL_STATE, action) {
+export default function search(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'SEARCH_VIDEO_INIT':
       return {
