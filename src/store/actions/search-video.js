@@ -1,6 +1,7 @@
 import ytSearch from 'youtube-api-v3-search';
 import API_KEY from '../../api/api';
 
+// Action asincrona
 export const initSearchVideo = () => {
   return {
     type: 'SEARCH_VIDEO_INIT',

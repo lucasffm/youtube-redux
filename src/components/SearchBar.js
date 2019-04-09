@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Segment, Input, Icon } from 'semantic-ui-react';
+import { Segment, Input, Icon, Grid } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { searchVideo } from '../store/actions/search-video';
 
@@ -13,18 +13,20 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className='search-bar'>
+      <Grid.Column width={24}>
         <Segment>
-          <Icon name='youtube' size='big' color='red' />
-          <Input
-            icon='search'
-            size='large'
-            placeholder='Pesquisar...'
-            className='input-search'
-            onKeyDown={e => this.searchTerm(e)}
-          />
+          <div className='search-bar'>
+            <Icon name='youtube' size='big' color='red' />
+            <Input
+              icon='search'
+              size='large'
+              placeholder='Pesquisar...'
+              className='input-search'
+              onKeyDown={e => this.searchTerm(e)}
+            />
+          </div>
         </Segment>
-      </div>
+      </Grid.Column>
     );
   }
 }

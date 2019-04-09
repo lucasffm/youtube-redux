@@ -14,8 +14,8 @@ class App extends Component {
       <Provider store={store}>
         <div className='container'>
           <SearchBar />
-          <VideoList />
           <VideoPlayer />
+          <VideoList />
         </div>
       </Provider>
     );
