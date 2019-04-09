@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import { Segment, Input } from 'semantic-ui-react';
+import { Segment, Input, Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { searchVideo } from '../store/actions/search-video';
 
 class SearchBar extends Component {
   searchTerm = e => {
-    const term = e.target.value;
+    const TERM = e.target.value;
     if (e.keyCode === 13) {
-      console.log(term);
-      this.props.searchVideo(term);
+      this.props.searchVideo(TERM);
     }
   };
 
   render() {
     return (
       <div className='search-bar'>
-        <Segment stacked>
+        <Segment>
+          <Icon name='youtube' size='big' color='red' />
           <Input
             icon='search'
             size='large'
             placeholder='Pesquisar...'
+            className='input-search'
             onKeyDown={e => this.searchTerm(e)}
           />
         </Segment>

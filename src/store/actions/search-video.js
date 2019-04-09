@@ -28,7 +28,6 @@ export const searchVideoFailure = () => {
 
 export const searchVideo = term => {
   return dispatch => {
-    console.log(API_KEY);
     dispatch(initSearchVideo());
     ytSearch(API_KEY, { q: term })
       .then(result => {
